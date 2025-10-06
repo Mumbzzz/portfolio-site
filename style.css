@@ -8,7 +8,7 @@ body {
 }
 
 a {
-  color: inherit; /* use same as text (no blue links) */
+  color: inherit; /* neutral links */
   text-decoration: none;
 }
 
@@ -50,7 +50,7 @@ nav ul {
 }
 
 nav ul li {
-  font-weight: bold;
+  font-weight: normal; /* unbold nav links */
 }
 
 /* Hero section */
@@ -64,18 +64,13 @@ nav ul li {
 
 .hero-text h2 {
   margin: 0;
-  font-size: 2.5rem; /* Bigger font for "Hi, I'm Mumbi" */
+  font-size: 2.5rem;
+  font-weight: normal; /* unbold main heading */
 }
 
 .hero-text p {
   margin: 1rem 0;
   font-size: 1.1rem;
-}
-
-.hero-text h3 {
-  margin: 0;
-  font-size: 1.25rem;
-  color: #555;
 }
 
 .hero img {
@@ -84,14 +79,14 @@ nav ul li {
   justify-self: center;
 }
 
-/* Blue button */
+/* Blue buttons (smaller) */
 .btn {
   display: inline-block;
   background: #007BFF;
   color: #fff;
-  padding: 0.75rem 1.5rem;
-  border-radius: 10px;
-  font-weight: bold;
+  padding: 0.5rem 1rem; /* smaller box */
+  border-radius: 8px;
+  font-size: 0.9rem;
   text-decoration: none;
   margin-top: 1rem;
 }
@@ -107,7 +102,7 @@ section {
 
 section h2 {
   margin-bottom: 1.5rem;
-  font-size: 1.8rem; /* larger section headers */
+  font-size: 1.8rem;
 }
 
 /* Portfolio */
@@ -125,7 +120,7 @@ section h2 {
 .project h3 {
   margin: 0.5rem 0;
   font-size: 1.2rem;
-  color: #000; /* Black project titles */
+  color: #000;
 }
 
 .project p,
@@ -138,8 +133,17 @@ section h2 {
 .contact-icons {
   display: flex;
   gap: 1.5rem;
-  justify-content: flex-start; /* move to left side */
+  justify-content: flex-start;
   font-size: 2rem;
+  color: #555; /* neutral gray icons */
+}
+
+.contact-icons a {
+  color: #555; /* ensure icons are gray */
+}
+
+.contact-icons a:hover {
+  color: #007BFF; /* optional hover blue */
 }
 
 footer {
