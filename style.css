@@ -24,13 +24,21 @@ header {
 
 nav {
   display: flex;
-  justify-content: flex-end;
-  gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
 }
 
-nav h1 {
-  margin-right: auto;
-  font-size: 1.5rem;
+nav .brand {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+nav .brand span {
+  font-size: 0.9rem;
+  font-weight: normal;
+  color: #666;
 }
 
 nav ul {
@@ -45,6 +53,7 @@ nav ul li {
   font-weight: bold;
 }
 
+/* Hero section */
 .hero {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -74,6 +83,22 @@ nav ul li {
   justify-self: center;
 }
 
+/* Blue button */
+.btn {
+  display: inline-block;
+  background: #007BFF;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: 1rem;
+}
+
+.btn:hover {
+  background: #0056b3;
+}
+
 /* Sections */
 section {
   padding: 2rem;
@@ -97,20 +122,20 @@ section h2 {
 
 .project h3 {
   margin: 0.5rem 0;
+  color: #000; /* Black project titles */
 }
 
 .skills {
   margin-top: 0.5rem;
+  color: #000; /* Black plain text for skills */
 }
 
-.skill-tag {
-  display: inline-block;
-  background: #eaf2ff;
-  color: #007BFF;
-  padding: 0.3rem 0.6rem;
-  border-radius: 5px;
-  font-size: 0.85rem;
-  margin: 0.2rem;
+/* Contact Icons */
+.contact-icons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  font-size: 2rem;
 }
 
 footer {
