@@ -123,7 +123,7 @@ section h2 {
 /* Project images uniform size */
 .project img {
   width: 100%;
-  height: 300px;      /* fixed height */
+  height: 500px;      /* fixed height */
   object-fit: cover;  /* crop without distortion */
   border-radius: 8px;
   margin-bottom: 0.5rem; /* small gap below image */
