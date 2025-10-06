@@ -58,7 +58,7 @@ nav ul li {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  padding: 3rem 0;
+  padding: 3rem 2rem;
   gap: 2rem;
 }
 
