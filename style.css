@@ -139,16 +139,8 @@ section h2 {
 .contact-icons {
   display: flex;
   gap: 1.5rem;
-  justify-content: flex-start;
+  justify-content: flex-start; /* move to left side */
   font-size: 2rem;
-}
-
-.contact-icons a .fa-envelope { color: #D44638; }  /* Gmail red */
-.contact-icons a .fa-linkedin { color: #0A66C2; }  /* LinkedIn blue */
-.contact-icons a .fa-github   { color: #000000; }  /* GitHub black */
-
-.contact-icons a:hover {
-  color: #007BFF; /* bright blue hover */
 }
 
 footer {
