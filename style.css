@@ -105,34 +105,45 @@ section h2 {
   font-size: 1.8rem;
 }
 
-/* Portfolio */
 .projects {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
+  align-items: stretch; /* force equal height cards */
 }
 
+/* Project card */
+.project {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%; /* make all project cards equal height */
+}
+
+/* Project images uniform size */
 .project img {
   width: 100%;
-  height: 200px;       /* consistent height for all project images */
-  object-fit: cover;   /* crops images nicely without stretching */
+  height: 200px;      /* fixed height */
+  object-fit: cover;  /* crop without distortion */
   border-radius: 8px;
+  margin-bottom: 0.5rem; /* small gap below image */
 }
 
+/* Content inside project card */
 .project h3 {
-  margin: 0.5rem 0;
+  margin: 0.5rem 0 0.25rem 0;
   font-size: 1.2rem;
   color: #000;
 }
 
 .project p {
-  margin-bottom: 0.25rem; /* reduce space below description */
+  margin: 0 0 0.25rem 0;
   font-size: 1rem;
   color: #000;
 }
 
 .project .skills {
-  margin-top: 0.1rem; /* very tight spacing above skills */
+  margin-top: auto;  /* push skills to bottom, aligning titles */
   font-size: 1rem;
   color: #000;
 }
