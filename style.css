@@ -97,11 +97,11 @@ nav ul li {
 
 /* Sections */
 section {
-  padding: 2rem;
+  padding: 1rem 2rem;
 }
 
 section h2 {
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.75rem;
   font-size: 1.8rem;
 }
 
@@ -123,9 +123,14 @@ section h2 {
   color: #000;
 }
 
-.project p,
+.project p {
+  margin-bottom: 0.25rem; /* reduce space below description */
+  font-size: 1rem;
+  color: #000;
+}
+
 .project .skills {
-  margin-top: 0.25rem; /* reduce space between description and skills */
+  margin-top: 0.1rem; /* very tight spacing above skills */
   font-size: 1rem;
   color: #000;
 }
