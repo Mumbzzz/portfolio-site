@@ -143,12 +143,12 @@ section h2 {
   font-size: 2rem;
 }
 
-.contact-icons a {
-  color: inherit; /* let icons use their brand colors */
-}
+.contact-icons a .fa-envelope { color: #D44638; }  /* Gmail red */
+.contact-icons a .fa-linkedin { color: #0A66C2; }  /* LinkedIn blue */
+.contact-icons a .fa-github   { color: #000000; }  /* GitHub black */
 
 .contact-icons a:hover {
-  color: #007BFF; /* bright blue on hover */
+  color: #007BFF; /* bright blue hover */
 }
 
 footer {
