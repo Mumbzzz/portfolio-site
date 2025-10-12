@@ -171,8 +171,8 @@ footer {
 
 /* Project Page Styles */
 .project-page {
-  padding: 1.5rem 2rem;
-  max-width: 1000px;
+  padding: 2rem clamp(3rem, 8vw, 6rem);
+  max-width: 1200px;
   margin: 0 auto;
 }
 
