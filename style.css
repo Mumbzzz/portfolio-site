@@ -212,6 +212,7 @@ footer {
   object-fit: cover;     /* crops evenly without distortion */
   border-radius: 8px;
   display: block;
+  cursor: zoom-in;
 }
 
 .project-gallery figcaption {
@@ -234,9 +235,32 @@ footer {
   text-decoration: underline;
 }
 
+/* Subtle button for press coverage link */
+.press-link {
+  text-align: center;
+  margin: 2rem 0 1rem 0;
+}
+
+.press-link a {
+  background: #4A90E2;       /* softer professional blue */
+  color: #fff;
+  padding: 0.55rem 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: background 0.25s ease;
+  display: inline-block;
+}
+
+.press-link a:hover {
+  background: #2F6FB7;       /* gentle darker blue on hover */
+}
+
 /* -------------------------------
    Lightbox overlay for gallery
 --------------------------------*/
+/* Lightbox overlay for gallery */
 .lightbox {
   position: fixed;
   top: 0; left: 0;
@@ -264,4 +288,3 @@ footer {
   box-shadow: 0 0 15px rgba(255,255,255,0.3);
   cursor: zoom-out;
 }
-
