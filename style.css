@@ -168,3 +168,58 @@ footer {
   font-size: 0.9rem;
   color: #666;
 }
+
+/* Project Page Styles */
+.project-page {
+  padding: 1.5rem 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.project-page h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.project-page ul {
+  margin: 1rem 0;
+  padding-left: 1.2rem;
+}
+
+.project-page ul li {
+  margin-bottom: 0.5rem;
+}
+
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 1.5rem 0;
+}
+
+.project-gallery img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.project-gallery figcaption {
+  text-align: center;
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+  color: #444;
+}
+
+.back-link {
+  margin-top: 2rem;
+}
+
+.back-link a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.back-link a:hover {
+  text-decoration: underline;
+}
