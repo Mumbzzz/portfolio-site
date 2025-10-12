@@ -81,22 +81,65 @@
   </footer>
 
   <script>
-  document.querySelectorAll('.project-gallery img').forEach(img => {
-    img.addEventListener('click', () => {
-      const lightbox = document.createElement('div');
-      lightbox.className = 'lightbox active';
-      const fullImg = document.createElement('img');
-      fullImg.src = img.src;
-      lightbox.appendChild(fullImg);
-      document.body.appendChild(lightbox);
+  const images = document.querySelectorAll('.project-gallery img');
+  let currentIndex = 0;
+  let lightbox, fullImg, prevBtn, nextBtn;
   
-      lightbox.addEventListener('click', () => {
-        lightbox.classList.remove('active');
-        setTimeout(() => lightbox.remove(), 300);
-      });
-    });
+  images.forEach((img, index) => {
+    img.addEventListener('click', () => openLightbox(index));
   });
+  
+  function openLightbox(index) {
+    currentIndex = index;
+  
+    lightbox = document.createElement('div');
+    lightbox.className = 'lightbox active';
+  
+    fullImg = document.createElement('img');
+    fullImg.src = images[currentIndex].src;
+  
+    prevBtn = document.createElement('button');
+    prevBtn.className = 'lightbox-prev';
+    prevBtn.innerHTML = '&#10094;'; // left arrow
+  
+    nextBtn = document.createElement('button');
+    nextBtn.className = 'lightbox-next';
+    nextBtn.innerHTML = '&#10095;'; // right arrow
+  
+    lightbox.append(fullImg, prevBtn, nextBtn);
+    document.body.appendChild(lightbox);
+  
+    prevBtn.addEventListener('click', showPrev);
+    nextBtn.addEventListener('click', showNext);
+    lightbox.addEventListener('click', closeLightbox);
+    document.addEventListener('keydown', handleKeys);
+  }
+  
+  function showPrev(e) {
+    e.stopPropagation();
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    fullImg.src = images[currentIndex].src;
+  }
+  
+  function showNext(e) {
+    e.stopPropagation();
+    currentIndex = (currentIndex + 1) % images.length;
+    fullImg.src = images[currentIndex].src;
+  }
+  
+  function closeLightbox() {
+    lightbox.classList.remove('active');
+    document.removeEventListener('keydown', handleKeys);
+    setTimeout(() => lightbox.remove(), 300);
+  }
+  
+  function handleKeys(e) {
+    if (e.key === 'ArrowLeft') showPrev(e);
+    if (e.key === 'ArrowRight') showNext(e);
+    if (e.key === 'Escape') closeLightbox();
+  }
   </script>
+
 
 </body>
 </html>
