@@ -173,7 +173,7 @@ footer {
 .project-page {
   max-width: 1100px;         /* limit line length */
   margin: 0 auto;            /* center horizontally */
-  padding: 2rem 4rem;        /* generous left/right breathing room */
+  padding: 1.5rem 2rem;        /* generous left/right breathing room */
   box-sizing: border-box;    /* make padding part of total width */
 }
 
