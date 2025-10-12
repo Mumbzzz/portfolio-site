@@ -79,5 +79,24 @@
   <footer>
     <p>© 2025 Mumbi Whidby</p>
   </footer>
+
+  <script>
+  document.querySelectorAll('.project-gallery img').forEach(img => {
+    img.addEventListener('click', () => {
+      const lightbox = document.createElement('div');
+      lightbox.className = 'lightbox active';
+      const fullImg = document.createElement('img');
+      fullImg.src = img.src;
+      lightbox.appendChild(fullImg);
+      document.body.appendChild(lightbox);
+  
+      lightbox.addEventListener('click', () => {
+        lightbox.classList.remove('active');
+        setTimeout(() => lightbox.remove(), 300);
+      });
+    });
+  });
+  </script>
+
 </body>
 </html>
